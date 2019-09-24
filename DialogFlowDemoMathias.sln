@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogFlowDemoMathias", "DialogFlowDemoMathias\DialogFlowDemoMathias.csproj", "{15790604-4D83-4CA1-A0A6-01E3B9238C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomStuff", "RandomStuff\RandomStuff.csproj", "{99A62696-1BB5-4237-9260-BAE62C487F8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15790604-4D83-4CA1-A0A6-01E3B9238C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15790604-4D83-4CA1-A0A6-01E3B9238C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15790604-4D83-4CA1-A0A6-01E3B9238C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15790604-4D83-4CA1-A0A6-01E3B9238C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {179A42D1-304F-4970-ADA7-C4F53EC11CCE}
+	EndGlobalSection
+EndGlobal

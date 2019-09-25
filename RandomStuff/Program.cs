@@ -5,8 +5,8 @@ using Google.Cloud.Storage.V1;
 using System.Linq;
 using System.Collections.Generic;
 using Google.Cloud.Dialogflow.V2;
-
-
+using System.IO;
+using System.Reflection;
 
 namespace Rnadomstuff
     {
@@ -33,10 +33,12 @@ namespace Rnadomstuff
                                          string[] texts,
                                          string languageCode = "en-US")
         {
-            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"C:\Users\Mathias\Source\Repos\Stuff\RandomStuff\json\GoogleCred.json");
+
+            string workingDirectory = Environment.CurrentDirectory;
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\json\GoogleCred.json");
             var client = SessionsClient.Create();
 
-
+            
             foreach (var text in texts)
             {
                 var response = client.DetectIntent(

@@ -18,7 +18,7 @@ namespace Rnadomstuff
                 // Your Google Cloud Platform project ID.
                 string projectId = "assiant-pc";
             string sessionId = "123456789";
-            string text = "What is the weather in Aalborg";
+            string text = "What is my name?";
             String[] texts = new string[] { text };
 
 
@@ -33,7 +33,7 @@ namespace Rnadomstuff
                                          string[] texts,
                                          string languageCode = "en-US")
         {
-            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"C:\Users\Mathias\source\repos\DialogFlowDemoMathias\RandomStuff\json\GoogleCred.json");
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"C:\Users\Mathias\Source\Repos\Stuff\RandomStuff\json\GoogleCred.json");
             var client = SessionsClient.Create();
 
 
@@ -61,6 +61,7 @@ namespace Rnadomstuff
                 Console.WriteLine($"Intent confidence: {queryResult.IntentDetectionConfidence}");
                 Console.WriteLine($"Fulfillment text: {queryResult.FulfillmentText}");
                 Console.WriteLine();
+                Console.ReadLine();
             }
 
             return 0;

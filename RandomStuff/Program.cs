@@ -15,9 +15,11 @@ namespace Rnadomstuff
 
             static void Main(string[] args)
             {
+
                 // Your Google Cloud Platform project ID.
                 string projectId = "assiant-pc";
-            string sessionId = "123456789";
+            int randomNumber = RandomNumber(1, 600);
+            string sessionId = randomNumber.ToString();
             string text = "What is my name?";
             String[] texts = new string[] { text };
 
@@ -67,6 +69,13 @@ namespace Rnadomstuff
             }
 
             return 0;
+        }
+
+
+        public static int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
         }
 
     }

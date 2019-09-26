@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomStuff", "RandomStuff\RandomStuff.csproj", "{99A62696-1BB5-4237-9260-BAE62C487F8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{3991C0AC-AACF-4FF7-801F-AE27E8D2F203}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebhookApi", "..\Medium-Dialogflow-Webhook-With-WebApi\WebhookApi\WebhookApi\WebhookApi.csproj", "{E31B91F7-BF94-4469-82DD-42C28B5B6111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99A62696-1BB5-4237-9260-BAE62C487F8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3991C0AC-AACF-4FF7-801F-AE27E8D2F203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3991C0AC-AACF-4FF7-801F-AE27E8D2F203}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3991C0AC-AACF-4FF7-801F-AE27E8D2F203}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3991C0AC-AACF-4FF7-801F-AE27E8D2F203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31B91F7-BF94-4469-82DD-42C28B5B6111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31B91F7-BF94-4469-82DD-42C28B5B6111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31B91F7-BF94-4469-82DD-42C28B5B6111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31B91F7-BF94-4469-82DD-42C28B5B6111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

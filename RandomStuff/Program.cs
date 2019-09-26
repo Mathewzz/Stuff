@@ -20,7 +20,7 @@ namespace Rnadomstuff
                 string projectId = "assiant-pc";
             int randomNumber = RandomNumber(1, 600);
             string sessionId = randomNumber.ToString();
-            string text = "What is my name?";
+            string text = "What is ship is this?";
             String[] texts = new string[] { text };
 
 

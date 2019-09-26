@@ -7,7 +7,6 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-
 namespace DotNetCoreApiSample
 {
     public class Startup

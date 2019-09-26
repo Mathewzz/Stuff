@@ -15,39 +15,33 @@ namespace WebhookApi.Controllers
     [Route("webhook")]
     public class WebhookController : Controller
     {
-        private static readonly JsonParser jsonParser = new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
 
         [HttpPost]
-        public async Task<JsonResult> GetWebhookResponse()
+        public dynamic PostWithCloudResponse([FromBody] WebhookRequest dialogflowRequest)
         {
-            WebhookRequest request;
-            using (var reader = new StreamReader(Request.Body))
+            var intentName = dialogflowRequest.QueryResult.Intent.DisplayName;
+            var actualQuestion = dialogflowRequest.QueryResult.QueryText;
+            var testAnswer = $"Dialogflow Request for intent '{intentName}' and question '{actualQuestion}'";
+            var dialogflowResponse = new WebhookResponse
             {
-                request = jsonParser.Parse<WebhookRequest>(reader);
+                FulfillmentText = testAnswer,
+                FulfillmentMessages =
+                { new Intent.Types.Message
+                    { SimpleResponses = new Intent.Types.Message.Types.SimpleResponses
+                        { SimpleResponses_ =
+                            { new Intent.Types.Message.Types.SimpleResponse
+                                {
+                                   DisplayText = testAnswer,
+                                   TextToSpeech = testAnswer,
+                                   //Ssml = $"<speak>{testAnswer}</speak>"
+                                }
+                            }
+                        }
+                    }
             }
-
-            var pas = request.QueryResult.Parameters;
-            var whatShipIsThis = pas.Fields.ContainsKey("ship") && pas.Fields["ship"].ToString().Replace('\"', ' ').Trim().Length > 0;
-
-            var response = new WebhookResponse();
-
-            string name = "Veri nice ship";
-
-            StringBuilder sb = new StringBuilder();
-
-            if (whatShipIsThis)
-            {
-                sb.Append("The name of this ship is: " + name + "; ");
-            }
-
-            if (sb.Length == 0)
-            {
-                sb.Append("Sry what again?");
-            }
-
-            response.FulfillmentText = sb.ToString();
-
-            return Json(response);
+            };
+            var jsonResponse = dialogflowResponse.ToString();
+            return new ContentResult { Content = jsonResponse, ContentType = "application/json" }; ;
         }
     }
 }
